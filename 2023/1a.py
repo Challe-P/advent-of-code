@@ -1,21 +1,25 @@
+""" Module for 1a """
+
 from aocd import get_data
+
 def main():
+    """ Main module for day 1a of 2023 """
     data = get_data(day=1, year=2023).split()
     digits = []
     for line in data:
-        firstDigit = ""
-        lastDigit = ""
+        first_digit = ""
+        last_digit = ""
         line = list(line)
         for char in line:
             if char.isnumeric():
-                firstDigit = char
+                first_digit = char
                 break
         line.reverse()
         for char in line:
             if char.isnumeric():
-               lastDigit = char
-               break
-        digits.append(firstDigit + lastDigit)
+                last_digit = char
+                break
+        digits.append(first_digit + last_digit)
     digits = [int(i) for i in digits]
     answer = sum(digits)
     print(answer)

@@ -1,10 +1,14 @@
-from aocd import get_data
-import re
+""" Module for 1b """
 
-def numberConverter(line):
-    number_words = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "six": "6", "seven": "7", "eight": "8", "nine": "9"}
+import re
+from aocd import get_data
+
+def number_converter(line):
+    """ Converts the number words into numbers. """
+    number_words = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5",
+                    "six": "6", "seven": "7", "eight": "8", "nine": "9"}
     result_list = []
-    for number in number_words.keys():
+    for number in number_words:
         result = [i.start() for i in re.finditer(number, line)]
         if result:
             for i in result:
@@ -15,31 +19,27 @@ def numberConverter(line):
     return line
 
 def main():
+    """ Main module for day 1b of 2023 """
     data = get_data(day=1, year=2023).split()
     digits = []
-    new_lines = []
     for line in data:
-        # Borde hoppas över om första och sista karaktären är en siffra.
-        line = numberConverter(line)
-        new_lines.append(line)
-        firstDigit = ""
-        lastDigit = ""
+        line = number_converter(line)
+        first_digit = ""
+        last_digit = ""
         line = list(line)
         for char in line:
             if char.isnumeric():
-                firstDigit = char
+                first_digit = char
                 break
         line.reverse()
         for char in line:
             if char.isnumeric():
-               lastDigit = char
-               break
-        digits.append(str(firstDigit) + str(lastDigit))
-    
+                last_digit = char
+                break
+        digits.append(str(first_digit) + str(last_digit))
     digits = [int(i) for i in digits]
     answer = sum(digits)
     print(answer)
 
 if __name__ == "__main__":
     main()
-
