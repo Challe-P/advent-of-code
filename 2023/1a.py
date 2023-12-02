@@ -1,9 +1,9 @@
-""" Module for 1a """
+""" Solution for 1a """
 
 from aocd import get_data
 
 def main():
-    """ Main module for day 1a of 2023 """
+    """ Main function for day 1a of 2023 """
     data = get_data(day=1, year=2023).split()
     digits = []
     for line in data:
