@@ -65,7 +65,7 @@ def full_number_getter(x, y, data):
 
 def gear_checker_3000(valid_numbers, gear_neighbours):
     """ Checks the gear list if the gear symbol (*) is next to exactly two numbers, multiplies
-    them and returns, then sums all the gears numbers. """
+    them and then returns the sum of all the gear numbers. """
     flat_coordinate_list = [item for sublist in valid_numbers.keys() for item in sublist]
     total_numbers = 0
     for neighbour_list_of_lists in gear_neighbours.values():
