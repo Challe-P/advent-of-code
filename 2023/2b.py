@@ -2,10 +2,9 @@
 from aocd import get_data
 
 def main():
-    """Main function for day 2b of 2023"""
+    """ Main function for day 2b of 2023 """
     data = get_data(day=2, year=2023).split("\n")
     sum_of_powers = 0
-    game_number = 1
     for game in data:
         max_red = 0
         max_green = 0
@@ -25,7 +24,6 @@ def main():
                     if int(balls[0]) > max_blue:
                         max_blue = int(balls[0])
         sum_of_powers += max_red * max_green * max_blue
-        game_number += 1
     print(sum_of_powers)
 
 if __name__ == "__main__":
