@@ -12,21 +12,12 @@ def data_to_dict(data):
     return desert_map
 
 def get_starting_positions(desert_map):
+    """Gets the starting positions, that is, all the positions that end with A"""
     positions = []
     for position in desert_map.keys():
         if position[2] == "A":
             positions.append(position)
     return positions
-
-def all_z(positions):
-    done = []
-    for position in positions:
-        if position[2] == "Z":
-            done.append(True)
-
-    if len(done) == len(positions):
-        return True
-    return False
 
 def main():
     """Main function for 8b"""
