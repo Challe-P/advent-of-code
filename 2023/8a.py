@@ -4,7 +4,7 @@ from itertools import cycle
 from aocd import get_data
 
 def data_to_dict(data):
-    """Turns the data to a dictionary"""
+    """Turns the data into a dictionary"""
     desert_map = {}
     for piece in data:
         piece = piece.split()

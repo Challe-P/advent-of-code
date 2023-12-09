@@ -43,12 +43,6 @@ def dict_maker(data):
 
 def main():
     """Main function for 7a"""
-    test_data= """32T3K 765
-T55J5 684
-KK677 28
-KTJJT 220
-QQQJA 483"""
-    data = test_data.split("\n")
     data = get_data(day=7, year=2023).split("\n")
     sort_order = {"A": 12, "K": 11, "Q": 10, "J": 9,
                   "T": 8, "9": 7, "8": 6, "7": 5, "6": 4,
