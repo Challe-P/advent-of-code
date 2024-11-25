@@ -17,7 +17,6 @@ def main():
         wins.append(race)
 
     answer = len(wins[0]*len(wins[1])*len(wins[2])*len(wins[3]))
-    print(len(wins))
     print(answer)
 
 if __name__ == "__main__":

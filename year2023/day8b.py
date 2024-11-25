@@ -30,7 +30,6 @@ def main():
     desert_map = data_to_dict(data)
     start_positions = get_starting_positions(desert_map)
     total_steps_list = []
-    print(start_positions)
     for position in start_positions:
         total_steps = 0
         for instruction in cycle(instructions):

@@ -15,14 +15,11 @@ def main():
             for balls in pull:
                 balls = balls.split()
                 if balls[1] == "red":
-                    if int(balls[0]) > max_red:
-                        max_red = int(balls[0])
+                    max_red = max(max_red, int(balls[0]))
                 elif balls[1] == "green":
-                    if int(balls[0]) > max_green:
-                        max_green = int(balls[0])
+                    max_green = max(max_green, int(balls[0]))
                 elif balls[1] == "blue":
-                    if int(balls[0]) > max_blue:
-                        max_blue = int(balls[0])
+                    max_blue = max(max_blue, int(balls[0]))
         sum_of_powers += max_red * max_green * max_blue
     print(sum_of_powers)
 
