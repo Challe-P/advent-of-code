@@ -1,10 +1,10 @@
 """ Solution for 1a """
 
-from aocd import get_data
+import aocd
 
 def main():
     """ Main function for day 1a of 2023 """
-    data = get_data(day=1, year=2023).split()
+    data = aocd.get_data(day=1, year=2023).split()
     digits = []
     for line in data:
         first_digit = ""

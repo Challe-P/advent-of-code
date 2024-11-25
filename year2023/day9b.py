@@ -1,9 +1,9 @@
 """ Solution for 9b """
-from aocd import get_data
+import aocd
 
 def main():
     """Main function for 9b"""
-    data = get_data(day=9, year=2023).split("\n")
+    data = aocd.get_data(day=9, year=2023).split("\n")
     total = []
     for line in data:
         row = list(map(int, line.split()))

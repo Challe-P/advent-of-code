@@ -1,7 +1,7 @@
 """ Solution for 8a """
 
 from itertools import cycle
-from aocd import get_data
+import aocd
 
 def data_to_dict(data):
     """Turns the data into a dictionary"""
@@ -14,7 +14,7 @@ def data_to_dict(data):
 
 def main():
     """Main function for 8a"""
-    data = get_data(day=8, year=2023).split("\n")
+    data = aocd.get_data(day=8, year=2023).split("\n")
     instructions = data[0]
     instructions = instructions.replace("L", "0")
     instructions = instructions.replace("R", "1")

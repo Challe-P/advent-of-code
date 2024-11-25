@@ -1,6 +1,6 @@
 """ Solution for 5a """
 from bisect import bisect_left, bisect_right
-from aocd import get_data
+import aocd
 
 class IntervalMap():
     """A map of intervals"""
@@ -138,7 +138,7 @@ def seed_checker(seed, chunk):
 
 def main():
     """Main function for 5a"""
-    data = get_data(day=5, year=2023).split("\n")
+    data = aocd.get_data(day=5, year=2023).split("\n")
     seeds = list(map(int, data[0].split(":")[1].split()))
     del data[:2]
     data = data_chunker(data)

@@ -1,10 +1,10 @@
 """ Solution for 4a """
 
-from aocd import get_data
+import aocd
 
 def main():
     """ Main function for day 4a of 2023 """
-    data = get_data(day=4, year=2023).split("\n")
+    data = aocd.get_data(day=4, year=2023).split("\n")
     total = 0
     for line in data:
         wins = 0

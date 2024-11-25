@@ -1,9 +1,9 @@
 """ Solution for 2b """
-from aocd import get_data
+import aocd
 
 def main():
     """ Main function for day 2b of 2023 """
-    data = get_data(day=2, year=2023).split("\n")
+    data = aocd.get_data(day=2, year=2023).split("\n")
     sum_of_powers = 0
     for game in data:
         max_red = 0

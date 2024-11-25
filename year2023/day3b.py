@@ -1,10 +1,10 @@
 """ Solution for 3b """
 
-from aocd import get_data
+import aocd
 
 def main():
     """ Main function for day 3b of 2023 """
-    data = get_data(day=3, year=2023).split()
+    data = aocd.get_data(day=3, year=2023).split()
 
     valid_numbers = {}
     gear_neighbours = {}

@@ -1,9 +1,9 @@
 """ Solution for 6a """
-from aocd import get_data
+import aocd
 
 def main():
     """Main function for 6a"""
-    data = get_data(day=6, year=2023).split("\n")
+    data = aocd.get_data(day=6, year=2023).split("\n")
     times = list(map(int, data[0].split(":")[1].split()))
     distances = list(map(int, data[1].split(":")[1].split()))
     wins = []

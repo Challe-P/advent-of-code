@@ -1,7 +1,7 @@
 """ Solution for 1b """
 
 import re
-from aocd import get_data
+import aocd
 
 def number_converter(line):
     """ Converts the number words into numbers. """
@@ -20,7 +20,7 @@ def number_converter(line):
 
 def main():
     """ Main function for day 1b of 2023 """
-    data = get_data(day=1, year=2023).split()
+    data = aocd.get_data(day=1, year=2023).split()
     digits = []
     for line in data:
         line = number_converter(line)

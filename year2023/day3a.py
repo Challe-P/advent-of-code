@@ -1,10 +1,10 @@
 """ Solution for 3a """
 
-from aocd import get_data
+import aocd
 
 def main():
     """ Main function for day 3a of 2023 """
-    data = get_data(day=3, year=2023).split()
+    data = aocd.get_data(day=3, year=2023).split()
     valid_numbers = {}
     x = 0
     for row in data:

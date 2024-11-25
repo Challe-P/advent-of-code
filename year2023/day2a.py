@@ -1,10 +1,10 @@
 """ Solution for 2a """
 
-from aocd import get_data
+import aocd
 
 def main():
     """ Main function for day 2a of 2023 """
-    data = get_data(day=2, year=2023).split("\n")
+    data = aocd.get_data(day=2, year=2023).split("\n")
     max_colors = {"red": 12, "green": 13, "blue": 14}
     possible_or_not = {}
     game_number = 1

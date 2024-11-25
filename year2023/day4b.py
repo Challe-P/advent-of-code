@@ -1,5 +1,5 @@
 """ Solution for 4b """
-from aocd import get_data
+import aocd
 
 def card_dict_maker(data):
     """Turns the data into a dict for faster processing"""
@@ -26,7 +26,7 @@ def win_checker(card_dict):
 
 def main():
     """Main function for 4b"""
-    data = get_data(day=4, year=2023).split("\n")
+    data = aocd.get_data(day=4, year=2023).split("\n")
     #data = test_data.split("\n")
     card_dict = card_dict_maker(data)
     print(win_checker(card_dict))

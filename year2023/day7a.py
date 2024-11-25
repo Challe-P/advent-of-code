@@ -1,5 +1,5 @@
 """ Solution for 7a """
-from aocd import get_data
+import aocd
 
 def two_pair_checker(hand):
     """ Checks if the hand is a two pair or a three of a kind. """
@@ -43,7 +43,7 @@ def dict_maker(data):
 
 def main():
     """Main function for 7a"""
-    data = get_data(day=7, year=2023).split("\n")
+    data = aocd.get_data(day=7, year=2023).split("\n")
     sort_order = {"A": 12, "K": 11, "Q": 10, "J": 9,
                   "T": 8, "9": 7, "8": 6, "7": 5, "6": 4,
                    "5": 3, "4": 2, "3": 1, "2": 0}
