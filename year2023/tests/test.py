@@ -20,6 +20,7 @@ from year2023 import day8a
 from year2023 import day8b
 from year2023 import day9a
 from year2023 import day9b
+from year2023 import day10a
 
 
 def get_test_data(day, year):
@@ -125,6 +126,11 @@ class TestSolutions(unittest.TestCase):
         """Tests day 9b"""
         day9b.main()
         mock_print.assert_called_once_with(1019)
+
+    def test10a(self, mock_print):
+        """Tests day 10a"""
+        day10a.main()
+        mock_print.assert_called_once_with(6599)
 
 if __name__ == "__main__":
     unittest.main()
