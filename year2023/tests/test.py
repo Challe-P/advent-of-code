@@ -21,7 +21,6 @@ from year2023 import day8b
 from year2023 import day9a
 from year2023 import day9b
 from year2023 import day10a
-from year2023 import day10b
 
 
 def get_test_data(day, year):
