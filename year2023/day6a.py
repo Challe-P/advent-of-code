@@ -16,7 +16,8 @@ def main():
             speed -= 1
         wins.append(race)
 
-    answer = len(wins[0]*len(wins[1])*len(wins[2])*len(wins[3]))
+    answer = 1
+    [answer := answer * len(w) for w in wins] 
     print(answer)
 
 if __name__ == "__main__":
