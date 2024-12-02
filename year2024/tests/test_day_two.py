@@ -19,7 +19,7 @@ class DayTwoTests(unittest.TestCase):
         self.assertEqual(day_two_obj.solve_a(), self.example_answer_a,
                         "Solution for A is wrong with example data!")
 
-    #@unittest.skip("skips because real data isn't pushed to GitHub")
+    @unittest.skip("skips because real data isn't pushed to GitHub")
     def test_two_a_real(self):
         """ Solves with real data, that doesn't get pushed. Deactivate when pushing to github """
         data = test_utils.get_test_data(self.day, self.year)
@@ -34,7 +34,7 @@ class DayTwoTests(unittest.TestCase):
         self.assertEqual(day_two_obj.solve_b(), self.example_answer_b,
                         "Solution for B is wrong with example data!")
 
-    #@unittest.skip("skips because real data isn't pushed to GitHub")
+    @unittest.skip("skips because real data isn't pushed to GitHub")
     def test_two_b_real(self):
         """ Solves with real data, that doesn't get pushed. Deactivate when pushing to github """
         data = test_utils.get_test_data(self.day, self.year)
