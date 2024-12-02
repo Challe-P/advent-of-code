@@ -1,5 +1,4 @@
 """ Solves the puzzles for day one 2024 """
-
 from utils import day
 
 class DayOne(day.Day):
