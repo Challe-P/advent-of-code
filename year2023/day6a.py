@@ -1,5 +1,7 @@
-""" Solution for 6a """
+"""Solution for 6a"""
+
 import aocd
+
 
 def main():
     """Main function for 6a"""
@@ -17,8 +19,9 @@ def main():
         wins.append(race)
 
     answer = 1
-    [answer := answer * len(w) for w in wins] 
+    [answer := answer * len(w) for w in wins]
     print(answer)
+
 
 if __name__ == "__main__":
     main()

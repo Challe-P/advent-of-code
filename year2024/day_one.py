@@ -1,10 +1,12 @@
-""" Solves the puzzles for day one 2024 """
+"""Solves the puzzles for day one 2024"""
+
 from utils import day
 
-class DayOne(day.Day):
-    """ Solves the puzzles for day one 2024 """
 
-    def __init__(self, year=2024, date=1, data = None):
+class DayOne(day.Day):
+    """Solves the puzzles for day one 2024"""
+
+    def __init__(self, year=2024, date=1, data=None):
         super().__init__(year, date, data)
 
     def solve_a(self):
@@ -20,11 +22,11 @@ class DayOne(day.Day):
         left_list, right_list = self.list_splitter()
         total_score = 0
         for loc_id in left_list:
-            total_score += (loc_id * right_list.count(loc_id))
+            total_score += loc_id * right_list.count(loc_id)
         return total_score
 
     def list_splitter(self) -> list[list]:
-        """ Splits the parsed input in one left and one right part """
+        """Splits the parsed input in one left and one right part"""
         left_list = []
         right_list = []
         for line in self.parsed_data:
@@ -32,6 +34,7 @@ class DayOne(day.Day):
             left_list.append(int(left_number))
             right_list.append(int(right_number))
         return left_list, right_list
+
 
 if __name__ == "__main__":
     current_day = DayOne()

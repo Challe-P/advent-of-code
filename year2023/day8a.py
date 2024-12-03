@@ -1,7 +1,8 @@
-""" Solution for 8a """
+"""Solution for 8a"""
 
 from itertools import cycle
 import aocd
+
 
 def data_to_dict(data):
     """Turns the data into a dictionary"""
@@ -30,6 +31,7 @@ def main():
         position = desert_map[position][next_step]
         total_steps += 1
     print(total_steps)
+
 
 if __name__ == "__main__":
     main()

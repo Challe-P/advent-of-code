@@ -1,8 +1,10 @@
-""" Helper functions for the tests """
+"""Helper functions for the tests"""
+
 import os
 
+
 def get_test_data(day: int, year: int) -> str:
-    """ Function for getting the cached test data """
+    """Function for getting the cached test data"""
     if day < 10:
         day = "0" + str(day)
     current_dir = os.path.dirname(__file__)
@@ -11,8 +13,9 @@ def get_test_data(day: int, year: int) -> str:
     with open(testdata_path, encoding="utf-8", mode="r") as file:
         return file.read()
 
+
 def get_example_data(day: int, year: int) -> str:
-    """ Function for getting the cached test data """
+    """Function for getting the cached test data"""
     if day < 10:
         day = "0" + str(day)
     current_dir = os.path.dirname(__file__)

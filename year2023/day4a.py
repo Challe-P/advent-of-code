@@ -1,9 +1,10 @@
-""" Solution for 4a """
+"""Solution for 4a"""
 
 import aocd
 
+
 def main():
-    """ Main function for day 4a of 2023 """
+    """Main function for day 4a of 2023"""
     data = aocd.get_data(day=4, year=2023).split("\n")
     total = 0
     for line in data:
@@ -15,7 +16,7 @@ def main():
         for number in winning_numbers:
             wins += card_numbers.count(number)
         if wins:
-            total += 2**(wins-1)
+            total += 2 ** (wins - 1)
     print(total)
 
 

@@ -1,7 +1,9 @@
-""" Solution for 8b """
+"""Solution for 8b"""
+
 import math
 from itertools import cycle
 import aocd
+
 
 def data_to_dict(data):
     """Turns the data into a dictionary"""
@@ -11,6 +13,7 @@ def data_to_dict(data):
         desert_map.update({piece[0]: (piece[2][1:4], piece[3][:-1])})
     return desert_map
 
+
 def get_starting_positions(desert_map):
     """Gets the starting positions, that is, all the positions that end with A"""
     positions = []
@@ -18,6 +21,7 @@ def get_starting_positions(desert_map):
         if position[2] == "A":
             positions.append(position)
     return positions
+
 
 def main():
     """Main function for 8b"""
@@ -41,6 +45,7 @@ def main():
         total_steps_list.append(total_steps)
     least_common_multiple = math.lcm(*total_steps_list)
     print(least_common_multiple)
+
 
 if __name__ == "__main__":
     main()

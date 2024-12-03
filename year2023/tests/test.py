@@ -1,7 +1,7 @@
-""" Tests for 2023 solutions """
+"""Tests for 2023 solutions"""
+
 import unittest
 import os
-import aocd
 from unittest.mock import patch
 from year2023 import day1a
 from year2023 import day1b
@@ -24,7 +24,7 @@ from year2023 import day10a
 
 
 def get_test_data(day, year):
-    """ Function for getting the cached test data """
+    """Function for getting the cached test data"""
     if day < 10:
         day = "0" + str(day)
     current_dir = os.path.dirname(__file__)
@@ -33,12 +33,13 @@ def get_test_data(day, year):
     with open(testdata_path, encoding="utf-8", mode="r") as file:
         return file.read()
 
-@patch('builtins.print')
+
+@patch("builtins.print")
 class TestSolutions(unittest.TestCase):
-    """ Tests for 2023 advent of code solutions """
+    """Tests for 2023 advent of code solutions"""
 
     def setUp(self):
-        patch('aocd.get_data', side_effect=get_test_data).start()
+        patch("aocd.get_data", side_effect=get_test_data).start()
 
     def test1a(self, mock_print):
         """Tests day 1a"""
@@ -46,16 +47,14 @@ class TestSolutions(unittest.TestCase):
         mock_print.assert_called_once_with(142)
 
     def test1b(self, mock_print):
-        """Tests day 1b"""    
+        """Tests day 1b"""
         day1b.main()
         mock_print.assert_called_once_with(142)
 
-
     def test2a(self, mock_print):
-        """Tests day 2a"""  
+        """Tests day 2a"""
         day2a.main()
         mock_print.assert_called_once_with(8)
-
 
     def test2b(self, mock_print):
         """Tests day 2b"""
@@ -131,6 +130,7 @@ class TestSolutions(unittest.TestCase):
         """Tests day 10a"""
         day10a.main()
         mock_print.assert_called_once_with(8)
+
 
 if __name__ == "__main__":
     unittest.main()

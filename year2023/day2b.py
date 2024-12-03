@@ -1,8 +1,10 @@
-""" Solution for 2b """
+"""Solution for 2b"""
+
 import aocd
 
+
 def main():
-    """ Main function for day 2b of 2023 """
+    """Main function for day 2b of 2023"""
     data = aocd.get_data(day=2, year=2023).split("\n")
     sum_of_powers = 0
     for game in data:
@@ -22,6 +24,7 @@ def main():
                     max_blue = max(max_blue, int(balls[0]))
         sum_of_powers += max_red * max_green * max_blue
     print(sum_of_powers)
+
 
 if __name__ == "__main__":
     main()

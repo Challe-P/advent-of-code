@@ -1,5 +1,7 @@
-""" Solution for 6b """
+"""Solution for 6b"""
+
 import aocd
+
 
 def main():
     """Main function for 6b"""
@@ -13,6 +15,7 @@ def main():
             wins += 1
         speed -= 1
     print(wins)
+
 
 if __name__ == "__main__":
     main()

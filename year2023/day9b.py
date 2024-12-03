@@ -1,5 +1,7 @@
-""" Solution for 9b """
+"""Solution for 9b"""
+
 import aocd
+
 
 def main():
     """Main function for 9b"""
@@ -14,14 +16,15 @@ def main():
             index = 0
             for index, number in enumerate(differences[-1]):
                 if index != 0:
-                    row.append(number - differences[-1][index-1])
+                    row.append(number - differences[-1][index - 1])
             differences.append(row)
         differences.reverse()
         for index, row in enumerate(differences):
             if index != 0:
-                row.insert(0, row[0] - differences[index-1][0])
+                row.insert(0, row[0] - differences[index - 1][0])
         total.insert(0, differences[-1][0])
     print(sum(total))
+
 
 if __name__ == "__main__":
     main()

@@ -1,9 +1,10 @@
-""" Solution for 1a """
+"""Solution for 1a"""
 
 import aocd
 
+
 def main():
-    """ Main function for day 1a of 2023 """
+    """Main function for day 1a of 2023"""
     data = aocd.get_data(day=1, year=2023).split()
     digits = []
     for line in data:
@@ -23,6 +24,7 @@ def main():
     digits = [int(i) for i in digits]
     answer = sum(digits)
     print(answer)
+
 
 if __name__ == "__main__":
     main()
