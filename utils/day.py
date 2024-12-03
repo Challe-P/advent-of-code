@@ -1,36 +1,41 @@
-""" Module for a class with some standard methods and variables for Advent of Code puzzles """
+"""Module for a class with some standard methods and variables for Advent of Code puzzles"""
+
 import timeit
 import aocd
 
+
 class Day:
-    """ A class with some standard methods and variables for Advent of Code puzzles """
+    """A class with some standard methods and variables for Advent of Code puzzles"""
+
+    unparsed_data: str
     parsed_data: list
     day: int
     year: int
 
     def __init__(self, year: int, day: int, data: str = None):
-        """ Parses the data and stores in a class variable """
+        """Parses the data and stores in a class variable"""
         self.day = day
         self.year = year
         if not data:
             data = aocd.get_data(day=day, year=year)
+        self.unparsed_data = data
         self.parsed_data = self.parse_data(data)
 
     def parse_data(self, data: str) -> list:
-        """ Splits data into a list of lines. """
+        """Splits data into a list of lines."""
         return data.split("\n")
 
     def solve_a(self) -> int:
-        """ Solves the days first puzzle """
+        """Solves the days first puzzle"""
         raise NotImplementedError
 
     def solve_b(self) -> int:
-        """ Solves the days second puzzle """
+        """Solves the days second puzzle"""
         raise NotImplementedError
 
     def solve_performance(self, number=1):
-        """ Shows time to run solutions.
-        Borrowed from @cave-bjornson (https://github.com/cave-bjornson) """
+        """Shows time to run solutions.
+        Borrowed from @cave-bjornson (https://github.com/cave-bjornson)"""
         results = {}
         try:
             time_a = timeit.Timer(self.solve_a).timeit(number) / number
@@ -45,7 +50,7 @@ class Day:
         return results
 
     def print_output(self):
-        """ Prints the solutions and a performance result. """
+        """Prints the solutions and a performance result."""
         print("Merry Christmas!")
         print("Running script:\n")
         print(f"Solution for day {self.day}, problem A: {self.solve_a()}\n")
