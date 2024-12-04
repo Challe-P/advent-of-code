@@ -5,7 +5,7 @@ from year2024.tests import test_utils
 from year2024 import day_four
 
 
-class DayTests(unittest.TestCase):
+class DayFourTests(unittest.TestCase):
     """Tests if the day four solutions work"""
 
     year: int = 2024
