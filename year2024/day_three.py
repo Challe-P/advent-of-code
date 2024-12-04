@@ -17,7 +17,7 @@ class DayThree(day.Day):
             total += self.mul(int(match[0]), int(match[1]))
         return total
 
-    def mul(self, number, second_number):
+    def mul(self, number: int, second_number: int) -> int:
         """Elf computing, in real life!"""
         return number * second_number
 
@@ -26,15 +26,15 @@ class DayThree(day.Day):
             r"mul\((\d*),(\d*)\)|(do\(\)|don't\(\))", self.unparsed_data
         )
         total = 0
-        do = True
+        we_should_mul = True
         for match in matches:
             if match[2] == "do()":
-                do = True
+                we_should_mul = True
                 continue
             if match[2] == "don't()":
-                do = False
+                we_should_mul = False
                 continue
-            if do:
+            if we_should_mul:
                 total += self.mul(int(match[0]), int(match[1]))
         return total
 
