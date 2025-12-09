@@ -1,4 +1,5 @@
+#!/bin/bash
 ruff check
 ruff format
-pylint year2024
-python3 -m unittest discover year2024/tests
+pylint year2025
+python3 -m unittest discover year2025/tests
