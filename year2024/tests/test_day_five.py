@@ -13,9 +13,8 @@ class DayFiveTests(unittest.TestCase):
     example_answer_a: int = 143
     real_answer_a: int = 5713
     example_answer_b: int = 123
-    real_answer_b: int = 0
+    real_answer_b: int = 5180
 
-    @unittest.skip("APA")
     def test_five_a_example(self):
         """Tests to see if a is solved correctly with example data"""
         data = test_utils.get_example_data(self.day, self.year)
